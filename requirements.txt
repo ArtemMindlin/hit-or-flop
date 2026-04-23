@@ -1,0 +1,26 @@
+# Hit-or-Flop Project Dependencies
+# Modern versions for 2026 stability
+
+# Data Manipulation & Analysis
+pandas>=2.2.0
+numpy>=1.26.0
+scipy>=1.12.0
+pyarrow>=15.0.0
+
+# Scraping & Web
+requests>=2.31.0
+beautifulsoup4>=4.12.0
+
+# Machine Learning
+scikit-learn>=1.4.0
+xgboost>=2.0.0
+lightgbm>=4.3.0
+catboost>=1.2.0
+imbalanced-learn>=0.12.0
+
+# Visualization
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Jupyter Runtime
+ipykernel>=6.29.0
