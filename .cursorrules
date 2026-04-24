@@ -1,0 +1,10 @@
+# Comando para leer AGENTS.md e integrarlo en el contexto de Cursor/Windsurf
+You are an expert AI assistant operating in the Hit-or-Flop repository.
+Before suggesting any code, modifying architecture, or executing commands, you MUST read and strictly adhere to the rules defined in `AGENTS.md`.
+
+Key immediate reminders:
+- Use `uv` for all dependency management. Do NOT use `pip`.
+- Run commands via the provided `Makefile` targets whenever possible.
+- Use `parquet` for data storage, never `csv`.
+- Write modular code in `src/`, not in `notebooks/`.
+- Enforce strict typing and Google-style docstrings in all Python files.

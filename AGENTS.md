@@ -22,11 +22,13 @@ If you are an AI assistant, coding agent, or LLM (like Gemini, Copilot, or Curso
 
 ## 4. Technology & MLOps Stack
 *   **Dependency Management**: This project uses **`uv`**. Do not suggest `pip install` or `conda install`. Use `uv add <package>` or `uv run <script>`. Update `pyproject.toml` accordingly.
+*   **Execution Harness**: Always prefer running commands via the provided **`Makefile`** (e.g., `make train`, `make lint`).
 *   **Experiment Tracking**: All model training MUST be instrumented with **MLflow**. Log parameters, metrics (MAE, R2), and artifacts (models) using the local SQLite backend (`sqlite:///mlruns.db`).
 
 ## 5. Coding Standards
 *   **Type Hinting**: All new Python functions must include static type hints (e.g., `def process(df: pd.DataFrame) -> pd.DataFrame:`).
 *   **Documentation**: Include concise NumPy or Google style docstrings for every class and function in `src/`.
+*   **Linting & Formatting**: The project uses **`ruff`**. Before declaring a task complete, run `make lint` to ensure code quality and formatting compliance.
 *   **Memory Management**: When handling Pandas DataFrames, drop high-cardinality text columns (like raw lyrics or genres) before applying One-Hot Encoding to prevent Out-Of-Memory (OOM) errors.
 
 ## 6. Git Workflow
