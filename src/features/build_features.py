@@ -9,7 +9,10 @@ def preprocess_data(df: pd.DataFrame) -> pd.DataFrame:
     # Recortar columnas (asumiendo que las últimas 23 son targets secundarios o ruido)
     data_new = df.iloc[:, :-23]
     
-    cols_to_drop = ["track_name", "id", "artist_name", "release_date", "year"]
+    cols_to_drop = [
+        "track_name", "id", "artist_name", "release_date", "year", 
+        "genres", "subgenre_1", "subgenre_2", "genres_artists", "artists", "name"
+    ]
     
     # Eliminar solo si existen para evitar errores
     cols_to_drop = [c for c in cols_to_drop if c in data_new.columns]
